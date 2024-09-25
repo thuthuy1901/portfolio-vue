@@ -1,5 +1,8 @@
 <template>
-    <section class="relative space-y-4">
+    <section
+        class="relative space-y-4 animate-fade-down animate-duration-1000 max-md:pb-24"
+        id="Home"
+    >
         <div class="text-text text-2xl font-medium">
             <h2>Hi! I'm Thuy</h2>
             <h2>Fresher Frontend Developer</h2>
@@ -11,71 +14,17 @@
         </p>
         <button
             title="Download CV"
-            class="bg-transparent border-2 border-button text-button px-4 py-1 rounded-lg transition-colors duration-2000 ease-in-out hover:border-purple-500 hover:text-purple-500"
+            class="bg-transparent border-2 border-button text-button px-4 py-1 rounded-lg transition-colors duration-2000 ease-in-out hover:border-purple-500 hover:text-purple-500 animate-pulse animate-infinite"
         >
             <a href="/Fresher_Frontend_NguyenThiThuThuy.pdf" download> Download CV </a>
         </button>
-        <div class="flex gap-x-3">
-            <template v-for="(icon, index) in icons" :key="`icon-${index}`">
-                <template v-if="icon.isLink">
-                    <a :href="icon.link" target="_blank">
-                        <img
-                            :src="icon.img"
-                            :alt="icon.title"
-                            :title="icon.title"
-                            class="size-8 hover:opacity-80"
-                        />
-                    </a>
-                </template>
-                <template v-else>
-                    <button @click="copyText">
-                        <img
-                            :src="icon.img"
-                            :alt="icon.title"
-                            :title="`copy ${textToCopy}`"
-                            class="size-8 hover:opacity-80"
-                        />
-                    </button>
-                </template>
-            </template>
-        </div>
-        <div class="absolute right-0 top-0">
-            <img src="/banner-home.png" alt="banner-home" class="w-56" />
+        <ContactPortfolio />
+        <div class="absolute right-0 top-0 max-md:top-auto max-md:bottom-0">
+            <img src="/banner-home.png" alt="banner-home" class="w-56 max-lg:w-48 max-md:w-40" />
         </div>
     </section>
 </template>
 
 <script setup>
-import { toast } from 'vue3-toastify'
-const textToCopy = 'thuthuynguyen19012002@gmail.com'
-
-const copyText = async () => {
-    try {
-        await navigator.clipboard.writeText(textToCopy)
-        toast.success('Copy mail done')
-    } catch (err) {
-        toast.err('Copy mail fail')
-    }
-}
-
-const icons = [
-    {
-        isLink: true,
-        link: 'https://www.linkedin.com/in/thuthuy1901/',
-        img: '/linkedin.png',
-        title: 'linkedin',
-    },
-    {
-        isLink: false,
-        link: '',
-        img: '/gmail.png',
-        title: 'gmail',
-    },
-    {
-        isLink: true,
-        link: 'https://github.com/thuthuy1901',
-        img: '/github.png',
-        title: 'github',
-    },
-]
+import ContactPortfolio from './ContactPortfolio.vue'
 </script>

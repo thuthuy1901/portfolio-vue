@@ -1,14 +1,14 @@
 <template>
-    <section class="pt-20">
+    <section class="py-20" id="Resume">
         <h2 class="text-text text-2xl font-medium mb-10">Personal project</h2>
-        <div class="flex justify-between space-x-4 items-stretch">
+        <div class="flex max-md:flex-col justify-between gap-6 items-stretch">
             <div
                 v-for="(work, index) in works"
                 :key="`work-${index}`"
-                class="w-1/3 rounded-lg overflow-hidden bg-backgroundSecond flex flex-col transition-all duration-2000 ease-in-out hover:scale-110"
+                class="w-1/3 max-md:w-full rounded-3xl overflow-hidden bg-backgroundSecond flex flex-col transition-all duration-2000 ease-in-out hover:scale-110 border border-gray-600"
             >
                 <img :src="work.img" :alt="work.title" class="w-full" />
-                <div class="flex flex-col items-center p-3 gap-y-2 flex-1">
+                <div class="flex flex-col items-center px-3 py-5 gap-y-2 flex-1">
                     <div class="space-y-2 flex-grow">
                         <h4 class="text-center">{{ work.title }}</h4>
                         <p class="text-center text-gray-400 text-sm">{{ work.describe }}</p>
@@ -32,7 +32,7 @@ const works = [
         img: '/shop-book.jpg',
         title: 'Book Selling Web App',
         describe:
-            'FE: html/css, Bootstrap. BE: MySQL/MariaDB. Using PHP(laravel) to work with MVC.',
+            'FE: html/css, Bootstrap. BE: MySQL/MariaDB. Using PHP (laravel) to work with MVC.',
         link: 'https://github.com/thuthuy1901/Laravel_8.git',
     },
     {

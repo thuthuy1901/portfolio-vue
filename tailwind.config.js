@@ -6,6 +6,7 @@ export default {
             colors: {
                 background: '#1E0235',
                 backgroundSecond: '#290B40',
+                backgroundThird: '#290B40',
                 text: '#CAB355',
                 subText: '#79668B',
                 button: '#F4D42A',
@@ -16,5 +17,5 @@ export default {
             },
         },
     },
-    plugins: [],
+    plugins: [require('tailwindcss-animated')],
 }

@@ -1,14 +1,11 @@
 <template>
-    <header class="flex justify-between items-center py-4">
+    <header class="flex justify-between items-center py-4 animate-fade animate-duration-1000">
         <p class="text-text font-semibold text-xl">Thuy</p>
-        <ul class="flex gap-x-4 items-center text-gray-400">
-            <li class="cursor-pointer" to="/">Home</li>
-            <li class="cursor-pointer" to="/about">About</li>
-            <li class="cursor-pointer" to="/work">Works</li>
-            <li class="cursor-pointer" to="/resume">Resume</li>
-            <li class="cursor-pointer" to="/contact">Contact</li>
-        </ul>
+        <NavigationPortfolio class="max-md:hidden" />
+        <img src="/menu.png" alt="menu" class="size-10 hidden max-md:block" />
     </header>
 </template>
 
-<script setup></script>
+<script setup>
+import NavigationPortfolio from './NavigationPortfolio.vue'
+</script>

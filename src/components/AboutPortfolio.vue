@@ -1,6 +1,9 @@
 <template>
-    <section class="relative pt-20">
-        <div class="mx-16 p-8 pl-16 bg-backgroundSecond rounded-lg">
+    <section
+        class="relative pt-20 max-md:pt-10 animate-jump-in animate-duration-1000 overflow-hidden"
+        id="About"
+    >
+        <div class="ml-16 p-8 pl-20 bg-backgroundSecond rounded-lg">
             <h2 class="text-text text-2xl font-medium">About me</h2>
             <ul class="text-sm text-gray-400 space-y-4">
                 <li>
@@ -24,7 +27,7 @@
                     <button
                         v-if="job.tasks.length > 1"
                         @click="toggleExpand(index)"
-                        class="text-blue-500 underline"
+                        class="text-gray-400 underline hover:italic hover:text-text"
                     >
                         {{ isExpanded[index] ? 'See less' : 'See more' }}
                     </button>
@@ -43,7 +46,7 @@
                 </li>
             </ul>
         </div>
-        <img src="/banner-about.webp" alt="banner-about" class="absolute top-24 left-0 h-60" />
+        <img src="/banner-about.webp" alt="banner-about" class="absolute top-36 left-0 h-60" />
     </section>
     <MySkillPortfolio />
 </template>
@@ -60,7 +63,7 @@ const listJob = [
             'Working closely with Product managers, Designer to better understand requirements and user experience.',
             'Integrate RESTful APIs, implement user interfaces.',
         ],
-        skills: 'React.js, Typescript, Redux Toolkit, Micro Frontends, Tailwind,Flowbite,…',
+        skills: 'React.js, Typescript, Redux Toolkit, Micro Frontends, Tailwind, Flowbite,…',
         link: 'https://mezon.ai',
     },
     {
