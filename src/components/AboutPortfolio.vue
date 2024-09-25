@@ -43,12 +43,14 @@
                 </li>
             </ul>
         </div>
-        <img src="/banner-about.webp" alt="banner-about" class="absolute top-20 left-0 h-60" />
+        <img src="/banner-about.webp" alt="banner-about" class="absolute top-24 left-0 h-60" />
     </section>
+    <MySkillPortfolio />
 </template>
 
 <script setup>
 import { ref } from 'vue'
+import MySkillPortfolio from './MySkillPortfolio.vue'
 const listJob = [
     {
         title: 'Project 1: Mezon Web Chat',

@@ -4,6 +4,7 @@
         <HeaderPortfolio />
         <HomePortfolio />
         <AboutPortfolio />
+        <MyWorkPortfolio />
     </section>
 </template>
 
@@ -11,5 +12,6 @@
 import AboutPortfolio from '../components/AboutPortfolio.vue'
 import HeaderPortfolio from '../components/HeaderPortfolio.vue'
 import HomePortfolio from '../components/HomePortfolio.vue'
+import MyWorkPortfolio from '../components/MyWorkPortfolio.vue'
 import VideoBackground from '../components/VideoBackground.vue'
 </script>
