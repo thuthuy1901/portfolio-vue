@@ -3,7 +3,11 @@
         :class="['flex gap-x-4 items-center text-gray-400', props.class]"
         @click="scrollToSection($event)"
     >
-        <li v-for="(nav, index) in listNav" :key="`nav-${index}`" class="cursor-pointer">
+        <li
+            v-for="(nav, index) in listNav"
+            :key="`nav-${index}`"
+            class="cursor-pointer hover:text-white"
+        >
             {{ nav }}
         </li>
     </ul>
